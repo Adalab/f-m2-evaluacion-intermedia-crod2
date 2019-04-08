@@ -9,5 +9,17 @@ function getRandom(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
 console.log(getRandom(1, 100));
+
+/* Al pulsar el botón de prueba, acceder al contenido del input y mostrarlo en la consola */
+
+const button = document.querySelector('.btn');
+const inputContent = document.querySelector('.input');
+
+function game (event) {
+    const defaultContent = inputContent.value;
+    const result = parseInt(defaultContent);
+    console.log(result);
+};
+
+button.addEventListener('click', game);
